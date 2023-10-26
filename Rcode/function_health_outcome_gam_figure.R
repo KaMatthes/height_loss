@@ -4,7 +4,7 @@ function_health_outcome_gam_figure <- function (varOutcome, sex, title_plot, var
   dat_gam <- dat %>%
     select(eval(substitute(varOutcome)),sex,heightdiff_rel,SITAR_size_height, Excess.weight, region,education,socialclass,smoking, fruits,exercise) %>%
     filter(complete.cases(.)) %>%
-    filter(!heightdiff_rel > 6)
+    filter(!heightdiff_rel > 5.5)
 
   GAM_plot_function_binary <- function(model) {
     plot_mod <- plot(model, select=var_nr)

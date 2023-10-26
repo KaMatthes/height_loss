@@ -1,4 +1,4 @@
-.libPaths(c("H:/Documents/R/win-library/4.0", "C:/Program Files/R/R-4.0.5/library"))
+# .libPaths(c("H:/Documents/R/win-library/4.0", "C:/Program Files/R/R-4.0.5/library"))
 
 
 library(tidyverse)

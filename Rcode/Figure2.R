@@ -13,7 +13,7 @@ plot_male_loss <- plot_grid(plot1_m, plot2_m, plot3_m, plot4_m,align="hv",
 
 title <- ggdraw() + draw_label("Probability of heightloss - male", x=0.25, fontface='bold', size=25)
 Figure_male_loss <- plot_grid(title,plot_male_loss,plot_leg, nrow=3, rel_heights = c(.05,1,.05))
-save_plot("Analysis/output/Figure_male_loss.pdf", Figure_male_loss,base_height=16,base_width=14)
+save_plot("output/Figure_male_loss.pdf", Figure_male_loss,base_height=16,base_width=14)
 
 # Heightloss  Female
 
@@ -30,7 +30,7 @@ plot_female_loss <- plot_grid(plot1_f, plot2_f, plot3_f, plot4_f,align="hv",
 
 title <- ggdraw() + draw_label("Probability of heightloss - female", x=0.26, fontface='bold', size=25)
 Figure_female_loss <- plot_grid(title,plot_female_loss,plot_leg, nrow=3, rel_heights = c(.05,1,.05))
-save_plot("Analysis/output/Figure_female_loss.pdf", Figure_female_loss,base_height=16,base_width=14)
+save_plot("output/Figure_female_loss.pdf", Figure_female_loss,base_height=16,base_width=14)
 
 # SITAR height  Male 
 
@@ -47,7 +47,7 @@ plot_male_height <- plot_grid(plot1_m_h, plot2_m_h, plot3_m_h, plot4_m_h,align="
 
 title <- ggdraw() + draw_label("Probability of SITAR height - male", x=0.265, fontface='bold', size=25)
 Figure_male_height <- plot_grid(title,plot_male_height,plot_leg, nrow=3, rel_heights = c(.05,1,.05))
-save_plot("Analysis/output/Figure_male_sitar_height.pdf", Figure_male_height,base_height=16,base_width=14)
+save_plot("output/Figure_male_sitar_height.pdf", Figure_male_height,base_height=16,base_width=14)
 
 
 # Height  Female
@@ -65,4 +65,4 @@ plot_female_height <- plot_grid(plot1_f_h, plot2_f_h, plot3_f_h, plot4_f_h,align
 
 title <- ggdraw() + draw_label("Probability of SITAR height - female", x=0.275, fontface='bold', size=25)
 Figure_female_height <- plot_grid(title,plot_female_height,plot_leg, nrow=3, rel_heights = c(.05,1,.05))
-save_plot("Analysis/output/Figure_female_sitar_height.pdf", Figure_female_height,base_height=16,base_width=14)
+save_plot("output/Figure_female_sitar_height.pdf", Figure_female_height,base_height=16,base_width=14)

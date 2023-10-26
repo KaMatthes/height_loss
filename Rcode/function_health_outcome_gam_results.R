@@ -125,7 +125,7 @@ function_health_outcome_gam_results <- function (varOutcome) {
     results_gam <- bind_rows(results_gam_m, results_gam_f) %>%
       filter(!Var=="(Intercept)")
  
- write.table(results_gam,file=paste0("Analysis/output/results_gam_",varOutcome,".csv"),row.names=FALSE, sep=";")
+ write.table(results_gam,file=paste0("output/results_gam_",varOutcome,".csv"),row.names=FALSE, sep=";")
 }
 
 function_health_outcome_gam_results("health.score.sum")

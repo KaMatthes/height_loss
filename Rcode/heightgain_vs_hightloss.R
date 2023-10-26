@@ -1,11 +1,9 @@
 function_heightgain_loss_rel <- function(varAge, adjusted, sex) {
   
-  dat_f <- dat 
-  # %>%
-  #   select(height02, height07, height11, height15, height36, height69,heightgain2_7, heightgain7_11, heightdiff,
-  #          Excess.weight, education43, socialclass, smoking, fruits, exercise) %>%
-  #   filter(complete.cases(.))
-  
+  dat_f <- dat %>%
+    select(eval(substitute(varAge)),sex, heightdiff_rel,Excess.weight, region, education, socialclass, smoking, fruits, exercise) %>%
+    filter(complete.cases(.))
+
   if(adjusted=="no" & sex=="male"){
     formula <-as.formula(paste("heightdiff_rel ~",eval(substitute(varAge))))
     mod <- summary(lm(formula, data=dat_f[dat_f$sex=="1",]))

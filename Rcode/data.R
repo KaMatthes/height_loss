@@ -1,4 +1,4 @@
-dat <- read.csv("Analysis/input/KasparStaubZZfdoeziSCRAMBLED.csv", sep=",") %>%
+dat <- read.csv("input/KasparStaubZZfdoeziSCRAMBLED.csv", sep=",") %>%
   dplyr::select(height_father=fht52,
          birth_weight = mbwtu,
          height_mother = mht52,
@@ -121,7 +121,8 @@ dat <- read.csv("Analysis/input/KasparStaubZZfdoeziSCRAMBLED.csv", sep=",") %>%
          ) %>%
   ungroup() %>%
   mutate(heightdiff = ifelse(heightdiff<0, 0, heightdiff),
-         heightdiff_rel = heightdiff/height69*100)
+         heightdiff_rel = heightdiff/height36*100)
+         # heightdiff_rel36 = heightdiff/height36*100)
 
 # 
 # num <- nrow(dat)
