@@ -16,7 +16,7 @@ dat_69 <- dat %>%
 
 
 
-Suppl_dis <- ggplot(data=dat_69 ,aes(x=sex,y=heightdiff)) +
+Figure3_supp <- ggplot(data=dat_69 ,aes(x=sex,y=heightdiff)) +
   geom_violin(aes(x=sex,y=heightdiff)) +
   # geom_boxplot(data=datared, aes(factor(Grippe), weight),width=.1) +
   geom_quasirandom(aes(x=sex,y=heightdiff, col=points_col, size=points_col),width = 0.4) +
@@ -24,10 +24,10 @@ Suppl_dis <- ggplot(data=dat_69 ,aes(x=sex,y=heightdiff)) +
                geom = "crossbar", 
                width = 0.5,
                colour = "black") +
-  annotate("text", x=1, y=-12, label= "mean difference = 1.81 cm", size=5) +
-  # annotate("text", x=0.66, y=33, label= "preterm = 29.73 %", size=5) + 
-  annotate("text", x=2,y=-12, label= "mean difference =  2.37 cm", size=5) + 
-  annotate("text", x=1.5,y=-15, label= "p-value < 0.0000", size=5) + 
+  # annotate("text", x=1, y=-12, label= "mean difference = 1.81 cm", size=5) +
+  # # annotate("text", x=0.66, y=33, label= "preterm = 29.73 %", size=5) + 
+  # annotate("text", x=2,y=-12, label= "mean difference =  2.37 cm", size=5) + 
+  # annotate("text", x=1.5,y=-15, label= "p-value < 0.0000", size=5) + 
   # annotate("text", x=1.70, y=33, label=  "preterm = 14.85 %", size=5) + 
   scale_color_manual("",
                      breaks=c("0","1", "2"),
@@ -39,16 +39,18 @@ Suppl_dis <- ggplot(data=dat_69 ,aes(x=sex,y=heightdiff)) +
   guides(size = "none") +
   ylim(-15,30)+
   xlab("")+
-  ylab("Heightdifference in cm")+
+  ylab("Height loss in cm")+
   theme_bw()+
   theme(aspect.ratio=1,
-        axis.text=element_text(color="black",size=15),
-        axis.title=element_text(size=15),
-        panel.grid.major.x = element_blank(),
-        legend.text=element_text(size=15),
-        legend.position = c(.2, .8),
+        plot.title = element_text(size=size_axis),
+        strip.text.x=element_text(size=strip_text),
+        axis.text=element_text(color="black",size=size_axis),
+        axis.title=element_text(size=size_axis_title),
+        legend.text=element_text(size=size_legend),
+        legend.title=element_text(size=size_legend_title),
+        legend.position = c(.4, .9),
         legend.key.size = unit(0.8, "cm"))
 
 
-cowplot::save_plot("Analysis/output/Suppl_dis.pdf", Suppl_dis,base_height=10,base_width=10)
+cowplot::save_plot("output/Figure3_supp.pdf", Figure3_supp,base_height=10,base_width=10)
 

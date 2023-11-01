@@ -40,7 +40,7 @@ function_health_outcome_gam_figure <- function (varOutcome, sex, title_plot, var
       geom_line(data=plot_data[plot_data$Model=="Model 1",], aes(x=x,y=value,linetype=variable,linewidth=variable, col= "Model 1"))+
       geom_line(data=plot_data[plot_data$Model=="Model 2",], aes(x=x,y=value,linetype=variable,linewidth=variable,color="Model 2"))+
       geom_line(data=plot_data[plot_data$Model=="Model 3",], aes(x=x,y=value,linetype=variable,linewidth=variable,color= "Model 3"))+
-      xlab("Relative heightloss in %") +
+      xlab("Relative height loss in %") +
       ylab("Probabilty")+
       ylim(c(0,1)) +
       labs(color="")+
@@ -146,7 +146,7 @@ function_health_outcome_gam_figure <- function (varOutcome, sex, title_plot, var
       geom_line(data=plot_data[plot_data$Model=="Model 1",], aes(x=x,y=value,linetype=variable,linewidth=variable, col= "Model 1"))+
       geom_line(data=plot_data[plot_data$Model=="Model 2",], aes(x=x,y=value,linetype=variable,linewidth=variable,color="Model 2"))+
       geom_line(data=plot_data[plot_data$Model=="Model 3",], aes(x=x,y=value,linetype=variable,linewidth=variable,color= "Model 3"))+
-      xlab("Relative heightloss in %") +
+      xlab("Relative height loss in %") +
       ylab("Probabilty")+
       ylim(c(0,1)) +
       labs(color="")+
@@ -254,7 +254,7 @@ function_health_outcome_gam_figure <- function (varOutcome, sex, title_plot, var
       geom_line(data=plot_data[plot_data$Model=="Model 1",], aes(x=x,y=value,linetype=variable,linewidth=variable, col= "Model 1"))+
       geom_line(data=plot_data[plot_data$Model=="Model 2",], aes(x=x,y=value,linetype=variable,linewidth=variable,color="Model 2"))+
       geom_line(data=plot_data[plot_data$Model=="Model 3",], aes(x=x,y=value,linetype=variable,linewidth=variable,color= "Model 3"))+
-      xlab("Relative heightloss in %") +
+      xlab("Relative height loss in %") +
       ylab("Probabilty")+
       ylim(c(0,1)) +
       labs(color="")+
