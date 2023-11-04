@@ -27,7 +27,3 @@ function_heightgain_loss_rel <- function(varAge, adjusted, sex) {
   return(mod)
 }
 
-
-
-# formula <-as.formula(paste("heightdiff ~health.score.sum+Excess.weight+education43+socialclass+smoking+ fruits+exercise"))
-# mod<- summary(lm(formula, data=dat))

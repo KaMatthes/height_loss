@@ -3,10 +3,9 @@ dat <- read.csv("input/KasparStaubZZfdoeziSCRAMBLED.csv", sep=",") %>%
          birth_weight = mbwtu,
          height_mother = mht52,
          SITAR_size_height =ah_als2,
-         # SITAR_size_tempo = bh_als2,
+
          region = newreg46,
-         
-         # SITAR_size_velcity=ch_als2,
+
          height02 =  ht48u,
          height04 =ht50u,
          height06 =ht52u,
@@ -103,7 +102,6 @@ dat <- read.csv("input/KasparStaubZZfdoeziSCRAMBLED.csv", sep=",") %>%
   filter(!heightdiff > 15 | is.na(heightdiff)) %>%  
  filter(!heightdiff < -5 | is.na(heightdiff)) %>%
 
-  # filter(!heightdiff < 0) %>%
   droplevels %>%
   group_by(sex) %>%
   mutate(height02_z = scale(height02),
@@ -115,24 +113,7 @@ dat <- read.csv("input/KasparStaubZZfdoeziSCRAMBLED.csv", sep=",") %>%
          heightgain7_11_z = scale(heightgain7_11),
          heightgain11_15_z = scale(heightgain11_15),
          heightdiff_z = scale(heightdiff),
-         SITAR_size_height_z= scale(SITAR_size_height)
-         # SITAR_size_tempo_z = scale(SITAR_size_tempo),
-         # SITAR_size_velocity_z = scale(SITAR_size_velocity)
-         ) %>%
+         SITAR_size_height_z= scale(SITAR_size_height)  ) %>%
   ungroup() %>%
   mutate(heightdiff = ifelse(heightdiff<0, 0, heightdiff),
          heightdiff_rel = heightdiff/height36*100)
-         # heightdiff_rel36 = heightdiff/height36*100)
-
-# 
-# num <- nrow(dat)
-# mean_v <- -0.0037
-# sd_v <- 0.09
-# 
-# dat_velocity <- rnorm(num, mean_v,sd_v )
-
-# dat <- dat %>%
-  # mutate(SITAR_size_velocity = dat_velocity) %>%
-  # group_by(sex) %>%
-  # mutate( SITAR_size_velocity_z = scale(SITAR_size_velocity)) %>%
-  # ungroup() %>%

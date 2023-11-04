@@ -416,99 +416,6 @@ Mod_ad_female_s_height <- data.frame(function_heightgain_loss_rel(varAge="SITAR_
          Model="adjusted")
 
 
-# SITAR tempo
-
-# Mod_un_male_s_tempo <- data.frame(function_heightgain_loss_rel(varAge="SITAR_size_tempo_z",adjusted="no",sex="male")$coefficients) %>%
-#   mutate(Est = round(Estimate,3),
-#          CIl = round(Estimate - 1.96*`Std..Error`,3),
-#          CIu = round(Estimate + 1.96*`Std..Error`,3),
-#          Fac = row.names(.)) %>%
-#   filter(Fac =="SITAR_size_tempo_z") %>%
-#   dplyr::select(Fac, Est, CIl,CIu) %>%
-#   mutate(Var="SITAR tempo",
-#          Sex="male",
-#          Model="unadjusted")
-# 
-# Mod_ad_male_s_tempo <- data.frame(function_heightgain_loss_rel(varAge="SITAR_size_tempo_z",adjusted="yes",sex="male")$coefficients) %>%
-#   mutate(Est = round(Estimate,3),
-#          CIl = round(Estimate - 1.96*`Std..Error`,3),
-#          CIu = round(Estimate + 1.96*`Std..Error`,3),
-#          Fac = row.names(.)) %>%
-#   filter(Fac =="SITAR_size_tempo_z") %>%
-#   dplyr::select(Fac, Est, CIl,CIu) %>%
-#   mutate(Var="SITAR tempo",
-#          Sex="male",
-#          Model="adjusted")
-# # 
-# Mod_un_female_s_tempo <- data.frame(function_heightgain_loss_rel(varAge="SITAR_size_tempo_z",adjusted="no",sex="female")$coefficients) %>%
-#   mutate(Est = round(Estimate,3),
-#          CIl = round(Estimate - 1.96*`Std..Error`,3),
-#          CIu = round(Estimate + 1.96*`Std..Error`,3),
-#          Fac = row.names(.)) %>%
-#   filter(Fac =="SITAR_size_tempo_z") %>%
-#   dplyr::select(Fac, Est, CIl,CIu) %>%
-#   mutate(Var="SITAR tempo",
-#          Sex="female",
-#          Model="unadjusted")
-# 
-# Mod_ad_female_s_tempo <- data.frame(function_heightgain_loss_rel(varAge="SITAR_size_tempo_z",adjusted="yes",sex="female")$coefficients) %>%
-#   mutate(Est = round(Estimate,3),
-#          CIl = round(Estimate - 1.96*`Std..Error`,3),
-#          CIu = round(Estimate + 1.96*`Std..Error`,3),
-#          Fac = row.names(.)) %>%
-#   filter(Fac =="SITAR_size_tempo_z") %>%
-#   dplyr::select(Fac, Est, CIl,CIu) %>%
-#   mutate(Var="SITAR tempo",
-#          Sex="female",
-#          Model="adjusted")
-# 
-# # SITAR velocity
-# 
-# Mod_un_male_s_velocity <-  data.frame(function_heightgain_loss_rel(varAge="SITAR_size_velocity_z",adjusted="no",sex="male")$coefficients) %>%
-#   mutate(Est = round(Estimate,3),
-#          CIl = round(Estimate - 1.96*`Std..Error`,3),
-#          CIu = round(Estimate + 1.96*`Std..Error`,3),
-#          Fac = row.names(.)) %>%
-#   filter(Fac =="SITAR_size_velocity_z") %>%
-#   dplyr::select(Fac, Est, CIl,CIu) %>%
-#   mutate(Var="SITAR velocity",
-#          Sex="male",
-#          Model="unadjusted")
-# 
-# Mod_ad_male_s_velocity <- data.frame(function_heightgain_loss_rel(varAge="SITAR_size_velocity_z",adjusted="yes",sex="male")$coefficients) %>%
-#   mutate(Est = round(Estimate,3),
-#          CIl = round(Estimate - 1.96*`Std..Error`,3),
-#          CIu = round(Estimate + 1.96*`Std..Error`,3),
-#          Fac = row.names(.)) %>%
-#   filter(Fac =="SITAR_size_velocity_z") %>%
-#   dplyr::select(Fac, Est, CIl,CIu) %>%
-#   mutate(Var="SITAR velocity",
-#          Sex="male",
-#          Model="adjusted")
-# 
-# Mod_un_female_s_velocity <- data.frame(function_heightgain_loss_rel(varAge="SITAR_size_velocity_z",adjusted="no",sex="female")$coefficients) %>%
-#   mutate(Est = round(Estimate,3),
-#          CIl = round(Estimate - 1.96*`Std..Error`,3),
-#          CIu = round(Estimate + 1.96*`Std..Error`,3),
-#          Fac = row.names(.)) %>%
-#   filter(Fac =="SITAR_size_velocity_z") %>%
-#   dplyr::select(Fac, Est, CIl,CIu) %>%
-#   mutate(Var="SITAR velocity",
-#          Sex="female",
-#          Model="unadjusted")
-# 
-# Mod_ad_female_s_velocity <- data.frame(function_heightgain_loss_rel(varAge="SITAR_size_velocity_z",adjusted="yes",sex="female")$coefficients) %>%
-#   mutate(Est = round(Estimate,3),
-#          CIl = round(Estimate - 1.96*`Std..Error`,3),
-#          CIu = round(Estimate + 1.96*`Std..Error`,3),
-#          Fac = row.names(.)) %>%
-#   filter(Fac =="SITAR_size_velocity_z") %>%
-#   dplyr::select(Fac, Est, CIl,CIu) %>%
-#   mutate(Var="SITAR velocity",
-#          Sex="female",
-#          Model="adjusted")
-
-
 ### plot
 
 data_reg <- rbind(Mod_un_male2,Mod_ad_male2,Mod_un_female2, Mod_ad_female2,
@@ -524,10 +431,6 @@ data_reg <- rbind(Mod_un_male2,Mod_ad_male2,Mod_un_female2, Mod_ad_female2,
                             "Height at age 15" ,"Height at age 36","Height gain between 2 and 7",
                             "Height gain between 7 and 11", "Height gain between 11 and 15","SITAR height size")),
          Model=factor(Model, levels=c("unadjusted", "adjusted")))
-
-#                   
-# dat_reg2 <- rbind(Mod_un_male_s_tempo,Mod_ad_male_s_tempo,Mod_un_female_s_tempo, Mod_ad_female_s_tempo,
-#                   Mod_un_male_s_velocity,Mod_ad_male_s_velocity,Mod_un_female_s_velocity, Mod_ad_female_s_velocity)
 
 Figure1_rel <- ggplot( data_reg, aes(x=forcats::fct_rev(Var),y=Est),position=pd) + 
   geom_hline(yintercept=0, colour="grey", lwd=lwdline) + 
