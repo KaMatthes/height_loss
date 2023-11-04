@@ -1,5 +1,5 @@
 
-function_health_outcome_gam_all <- function (Sex) {
+function_health_outcome_gam_all <- function (Sex, var_nr=1) {
 
   dat_gam1 <- dat %>%
     select(health.score.sum,sex,heightdiff_rel) %>%
@@ -65,8 +65,8 @@ function_health_outcome_gam_all <- function (Sex) {
 data_male <- function_health_outcome_gam_all(Sex=1)
 data_female <- function_health_outcome_gam_all(Sex=2)
 plot_data <- rbind(data_male, data_female) %>%
-  mutate(sex=recode(sex, "1"="male",
-                    "2" ="female"))
+  mutate(sex=recode(sex, "1"="Male",
+                    "2" ="Female"))
     
   
 Figure2 <- ggplot()+
@@ -100,4 +100,4 @@ Figure2 <- ggplot()+
             legend.position="bottom")
     
 
-save_plot("output/Figure2_n.pdf", Figure2,base_height=10,base_width=16) 
+save_plot("output/Figure2.pdf", Figure2,base_height=10,base_width=16) 
