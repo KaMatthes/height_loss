@@ -30,6 +30,11 @@ title <- ggdraw() + draw_label("Probability of height loss - female", x=0.21, fo
 Figure_female_loss <- plot_grid(title,plot_female_loss,plot_leg, nrow=3, rel_heights = c(.05,1,.05))
 save_plot("output/Figure3.pdf", Figure_female_loss,base_height=16,base_width=14)
 
+
+
+
+
+
 # # SITAR height  Male 
 # 
 # plot1_m_h <- function_health_outcome_gam_figure(varOutcome="health.score.sum",sex="male", title="A) General health status", var_nr=2,legend_t = "no")
