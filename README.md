@@ -15,32 +15,14 @@ https://nshd.mrc.ac.uk/
 
 ```
 .
-+-- R
-+-- data
-+-- data_raw
++-- Rcode
 +-- output
 
 ```
 
-### `R` folder 
+### `Rcode` folder 
 
-This folder contains all R scripts.
-
-  - `data.R` : prepares the data for the analysis
-  - `Table1.R` : code to create Table1 and values of proportion test
-  - `Table2.R` : code for cross-protection calculation
-  - `Figure1.R` : code for logistical regression models and Figure 1
-  - `Supplement_Figure4.R` : code to create age distribution plot
- 
-  
-### `data` folder
-
-This folder contains the data created from  `data.R` 
-  - `data_grippe.RData` 
-  
-### `data_raw` folder
-This folder contains the raw data for the analysis:
--`Factory_Survey_Data.csv`
+This folder contains all R scripts of the regression models and to create the figures.
 
 ### `output` folder
 
