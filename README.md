@@ -30,7 +30,7 @@ This folder contains all outputs.
 
 ### `master.R` 
 
-This skript contains information of the used R packages, R scripts, plotting parameters etc, please run first ` load("data/data_grippe.RData")`.
+This skript contains information of the used R packages, R scripts, plotting parameters etc.
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
 
