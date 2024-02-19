@@ -1,11 +1,16 @@
-# Associations between height loss from age 40 and health at age 69 in women and men born in the UK in 1946 
+# Height loss in adulthood is associated with health outcomes in later life in men and women enrolled in the 1946 UK Birth Cohort (NSHD)
 
-## Paper
-submitted
+## Paper (preprint)
+<br >
+Katarina L Matthes, Kaspar Staub 
+<br >
+
+ <i> medRxiv </i> 
+https://doi.org/10.1101/2023.11.04.23298098
 
 ## Data
 
-The data is not public available und belongs to the National Survey of Health and Development (NSHD)
+The data is not public available and belongs to the National Survey of Health and Development (NSHD)
 https://nshd.mrc.ac.uk/
 
 
