@@ -1,4 +1,4 @@
-# Height loss in adulthood is associated with health outcomes in later life in men and women enrolled in the 1946 UK Birth Cohort (NSHD)
+# Is height loss in adulthood associated with health in later life among the 1946 UK Birth Cohort (NSHD) participants?
 
 ## Paper (preprint)
 <br >
