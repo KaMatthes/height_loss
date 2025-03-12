@@ -2,12 +2,6 @@
 
 ## Paper (preprint)
 <br >
-Katarina L Matthes, Kaspar Staub 
-<br >
-
- <i> medRxiv </i> 
-https://doi.org/10.1101/2023.11.04.23298098
-
 Katarina L Matthes, Kaspar Staub (2025) Is height loss in adulthood associated with health in later life among the 1946 UK Birth Cohort (NSHD) participants? <i> Aging and Health Research </i> 
 https://doi.org/10.1016/j.ahr.2025.100224
 
